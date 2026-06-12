@@ -1,8 +1,9 @@
+
 ValueSet: OrganizationalStructureVS
 Id: organizational-structure-vs
-Title: "Organizational structure"
-Description: "Detailed classification of healthcare institution types (e.g., specialized centers, clinical hospitals, dispensaries). This is a granular categorization defined by the Ministry of Health; for high-level functional groupings, see NomenclatureGroupVS."
-* ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/organizational-structure-vs"
+Title: "Organizational Structure"
+Description: "Organizational structure types used for classifying healthcare institutions in Uzbekistan"
 * ^experimental = true
-* ^language = #uz
+* ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/organizational-structure-vs"
 * include codes from system organizational-structure-cs
+

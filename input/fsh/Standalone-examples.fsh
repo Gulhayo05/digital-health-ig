@@ -1,5 +1,66 @@
 // This file contains only example instances to help enforce referential integrity within the profiles
 // As soon as a profile for an instance is created, the instance should be removed from this file
+Instance: blood-pressure-example
+InstanceOf: UZCoreObservation
+Usage: #example
+Title: "Example UZ Core Observation - Blood Pressure"
+Description: "Example instance of a blood pressure observation"
+* status = #final
+* code = http://loinc.org#55284-4 "Blood pressure systolic and diastolic"
+* subject = Reference(Patient/example-patient)
+* effectiveDateTime = "2025-03-16T00:00:00Z"
+* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[=].valueQuantity.value = 120
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = "http://unitsofmeasure.org"
+* component[=].valueQuantity.code = #mm[Hg]
+* component[+].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[=].valueQuantity.value = 80
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = "http://unitsofmeasure.org"
+* component[=].valueQuantity.code = #mm[Hg]
+
+Instance: body-weight-example
+InstanceOf: UZCoreObservation
+Usage: #example
+Title: "Example UZ Core Observation - Body Weight"
+Description: "Example instance of a body weight observation"
+* status = #final
+* code = http://loinc.org#29463-7 "Body weight"
+* subject = Reference(Patient/example-patient)
+* effectiveDateTime = "2025-03-16T00:00:00Z"
+* valueQuantity.value = 70
+* valueQuantity.unit = "kg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
+
+Instance: body-temperature-example
+InstanceOf: UZCoreObservation
+Usage: #example
+Title: "Example UZ Core Observation - Body Temperature"
+Description: "Example instance of a body temperature observation"
+* status = #final
+* code = http://loinc.org#8310-5 "Body temperature"
+* subject = Reference(Patient/example-patient)
+* effectiveDateTime = "2025-03-16T00:00:00Z"
+* valueQuantity.value = 36.6
+* valueQuantity.unit = "Cel"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #Cel
+
+
+
+Instance: example-cbc-panel
+InstanceOf: UZCoreObservation
+Title: "Example UZ Core Observation - CBC Panel"
+Description: "Example instance of a Complete Blood Count (CBC) panel observation"
+Usage: #example
+* status = #registered
+* code = http://loinc.org#58410-2 "CBC panel"
+* subject = Reference(Patient/example)
+* effectiveDateTime = "2025-03-16T00:00:00Z"
+* issued = "2025-03-16T12:00:00Z"
+* performer[0] = Reference(Practitioner/example)
 
 Instance: example-patient
 InstanceOf: Patient
@@ -16,7 +77,7 @@ Usage: #example
 Description: "Example ServiceRequest for CBC (Umumiy qon tahlili) order"
 * status = #active
 * intent = #order
-* code = observation-lab-research-codes-cs#lab-A "CBC panel"
+* code = observation-lab-research-codes-cs#test-0001-00001 "CBC panel"
 * subject = Reference(Patient/example-salim)
 * requester = Reference(Practitioner/example-practitioner)
 * authoredOn = "2025-11-04T08:00:00Z"

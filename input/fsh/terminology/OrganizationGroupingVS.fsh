@@ -5,4 +5,4 @@ Description: "Organization group types of Uzbekistan"
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/organization-grouping-uz-vs"
 * ^experimental = true
 * ^language = #uz
-* include codes from system OrganizationGroupingCS
+* include codes from system organization-grouping-uz-cs

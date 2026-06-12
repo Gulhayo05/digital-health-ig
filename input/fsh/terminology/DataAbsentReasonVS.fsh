@@ -7,4 +7,4 @@ Description: "Used to specify why the normally expected content of the data elem
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(DataAbsentReasonCS)
 
-* include codes from system $data-absent-reason-cs
+* include codes from system $observation-dataAbsentReason

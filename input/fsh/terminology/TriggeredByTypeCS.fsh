@@ -2,7 +2,7 @@ CodeSystem: TriggeredByTypeCS
 Id: triggered-by-type-cs
 Title: "Triggered By Type"
 Description: "TriggeredBy type codes with Uzbek and Russian translations"
-* insert SupplementCodeSystemDraft(triggered-by-type-cs, $observation-triggeredbytype-cs, 5.0.0)
+* insert SupplementCodeSystemDraft(triggered-by-type-cs, $triggered-by-type, 5.0.0)
 
 * #reflex
   * ^designation[0].language = #uz

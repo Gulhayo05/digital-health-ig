@@ -2,7 +2,7 @@ CodeSystem: ObservationInterpretationCS
 Id: observation-interpretation-cs
 Title: "Observation Interpretation"
 Description: "Observation interpretation codes with Uzbek and Russian translationss"
-* insert SupplementCodeSystemDraft(observation-interpretation-cs, $observation-interpretation-cs, 2.1.0)
+* insert SupplementCodeSystemDraft(observation-interpretation-cs, $observation-interpretation, 2.1.0)
 
 * #CAR
   * ^designation[0].language = #uz

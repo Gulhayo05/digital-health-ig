@@ -2,7 +2,7 @@ CodeSystem: ObservationStatusCS
 Id: observation-status-cs
 Title: "Observation Status"
 Description: "Observation status codes with Uzbek and Russian translations"
-* insert SupplementCodeSystemDraft(observation-status-cs, $observation-status-cs , 0.1.0)
+* insert SupplementCodeSystemDraft(observation-status-cs, $observation-status , 0.1.0)
 
 * #registered
   * ^designation[0].language = #uz

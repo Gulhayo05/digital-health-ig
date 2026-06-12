@@ -2,7 +2,7 @@ CodeSystem: ReferenceRangeMeaningCS
 Id: reference-range-meaning-cs
 Title: "ReferenceRangeMeaning"
 Description: "Reference range meaning codes with Uzbek and Russian translations"
-* insert SupplementCodeSystemDraft(reference-range-meaning-cs, $referencerange-meaning-cs, 5.0.0)
+* insert SupplementCodeSystemDraft(reference-range-meaning-cs, $reference-meaning, 5.0.0)
 
 * #normal
   * ^designation[0].language = #uz

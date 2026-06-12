@@ -1,7 +1,7 @@
 CodeSystem: OrganizationalSubordinationInstitutionCS
 Id: organizational-subordination-institution-cs
-Title: "Organizational subordination institution"
-Description: "Defines the type of medical organizations without forming a legal entity"
+Title: "Organizational Subordination Institution CodeSystem"
+Description: "Codes for organizational subordination institution types with Uzbek and Russian designations"
 * insert OriginalCodeSystemDraft(organizational-subordination-institution-cs)
 * #STIR-I_10 "Ko'p tarmokli markaziy poliklinika"
   * ^designation[0].language = #ru

@@ -7,4 +7,4 @@ Description: "Codes providing the status of an observation."
 * ^language = #uz
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ObservationStatusCS)
-* include codes from system $observation-status-cs 
+* include codes from system $observation-status

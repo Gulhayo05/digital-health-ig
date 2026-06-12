@@ -1,5 +1,5 @@
 Profile: UZCoreObservation
-Parent: $Observation
+Parent: Observation
 Id: uz-core-observation
 Title: "UZ Core Observation"
 Description: "Uzbekistan Core Observation profile for Observation resource based on FHIR R5"
@@ -25,7 +25,7 @@ Description: "Uzbekistan Core Observation profile for Observation resource based
 * focus only Reference(Patient or Group or Observation or ImagingSelection or MedicationAdministration or Specimen)
 * encounter MS
 * encounter only Reference(Encounter)
-* effective[x] MSpwd
+* effective[x] MS
 * issued MS
 * performer MS
 * performer only Reference(Practitioner or PractitionerRole or Organization or CareTeam or Patient or RelatedPerson)
@@ -63,15 +63,5 @@ Description: "Uzbekistan Core Observation profile for Observation resource based
   * interpretation from ObservationInterpretationVS (extensible)
 
 
-1  Instance: example-cbc-panel
-2  InstanceOf: UZCoreObservation
-3  Title: "Example UZ Core Observation - CBC Panel"
-4  Description: "Example instance of a Complete Blood Count (CBC) panel observation"
-5  Usage: #example
-6  * status = #registered
-7  * code = http://loinc.org#58410-2 "CBC panel"
-8  * subject = Reference(Patient/example)
-9  * effectiveDateTime = "2025-03-16T00:00:00Z"
-10 * issued = "2025-03-16T12:00:00Z"
-11 * performer[0] = Reference(Practitioner/example)
+
 

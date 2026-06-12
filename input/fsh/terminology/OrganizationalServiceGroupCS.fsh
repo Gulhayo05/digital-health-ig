@@ -1,8 +1,11 @@
 CodeSystem: OrganizationalServiceGroupCS
 Id: organizational-service-group-cs
-Title: "Organizational service group"
-Description: "Classifies healthcare organizations by their service delivery capabilities (e.g., outpatient only, inpatient only, outpatient + inpatient, day hospital). Defined by the Ministry of Health."
+Title: "Organizational Service Group Code System"
+Description: "Groups by type of services provided for medical organizations"
+* ^url = "https://terminology.dhp.uz/fhir/core/CodeSystem/organizational-service-group-cs"
+* ^experimental = true
 * insert OriginalCodeSystemDraft(organizational-service-group-cs)
+
 * #III_100 "Poliklinika bo'limi va statsionar bo'limi mavjud"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Имеется амбулаторное и стационарное отделение."

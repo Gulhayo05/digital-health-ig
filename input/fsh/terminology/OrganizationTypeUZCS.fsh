@@ -1,8 +1,8 @@
 CodeSystem: OrganizationTypeUZCS
-Id: organization-types-uz-cs
-Title: "Organization types of Uzbekistan"
-Description: "Organization types of Uzbekistan"
-* insert OriginalCodeSystemDraft(organization-types-uz-cs)
+Id: organization-type-uz-cs
+Title: "Organization Type CodeSystem (UZ/RU)"
+Description: "Codes for organization types with Uzbek and Russian designations"
+* insert OriginalCodeSystemDraft(organization-type-uz-cs)
 * #I "Boshqaruv boyicha taqsimlanishi"
   * ^designation[0].language = #ru
   * ^designation[=].value = "Распределение по управлению"

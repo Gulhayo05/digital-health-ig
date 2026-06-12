@@ -6,4 +6,4 @@ Description: "Codes providing the type of triggeredBy observation."
 * ^experimental = true
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(TriggeredByTypeCS)
-* include codes from system $observation-triggeredbytype-cs
+* include codes from system $triggered-by-type

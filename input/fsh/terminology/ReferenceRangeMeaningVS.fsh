@@ -6,5 +6,5 @@ Description: "This value set defines a set of codes that can be used to indicate
 * ^experimental = true
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ReferenceRangeMeaningCS)
-* include codes from system $referencerange-meaning-cs
+* include codes from system $reference-meaning
 

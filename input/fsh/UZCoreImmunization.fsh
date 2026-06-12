@@ -294,11 +294,6 @@ Usage: #example
 
 * active = true
 
-* type.coding[organizationalStructure] =
-    organizational-structure-cs#110 "Specialized scientific and practical medical center"
-
-* type.coding[specialization] =
-    organizational-specialization-cs#153.0 "Tuberculosis in adults"
 
 * name = "Republican Tuberculosis and Pulmonology Center"
 

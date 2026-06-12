@@ -2,7 +2,7 @@ CodeSystem: DataAbsentReasonCS
 Id: data-absent-reason-cs
 Title: "Absent data explanation"
 Description: "Data absent reason codes with Uzbek and Russian translations"
-* insert SupplementCodeSystemDraft(data-absent-reason-cs, $data-absent-reason-cs,0.1.0)
+* insert SupplementCodeSystemDraft(data-absent-reason-cs, $observation-dataAbsentReason,0.1.0)
 
 * #unknown
   * ^designation[0].language = #uz

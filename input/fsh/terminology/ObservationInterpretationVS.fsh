@@ -7,4 +7,4 @@ Description: "A categorical assessment, providing a rough qualitative interpreta
 * ^language = #uz
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ObservationInterpretationCS)
-* include codes from system $observation-interpretation-cs
+* include codes from system $observation-interpretation

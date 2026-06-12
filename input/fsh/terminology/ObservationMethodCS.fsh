@@ -4545,7 +4545,8 @@ Description: "Observation method codes (SNOMED CT) with Russian and English tran
   * ^designation[+].language = #uz
   * ^designation[=].value = "Intrakapsulyar ekstraksiya"
 
-* #257825001  * ^designation[0].language = #ru
+* #257825001  
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Фенестрация - действие"
   * ^designation[+].language = #uz
   * ^designation[=].value = "Fenestratsiya - harakat"

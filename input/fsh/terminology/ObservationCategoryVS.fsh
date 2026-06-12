@@ -7,4 +7,4 @@ Description: "Observation Category codes"
 * ^experimental = true
 * ^extension[0].url = $valueset-supplement
 * ^extension[=].valueCanonical = Canonical(ObservationCategoryCS)
-* include codes from system $observation-category-cs
+* include codes from system $observation-category

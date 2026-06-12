@@ -5,4 +5,4 @@ Description: "Codes that describe the normal value in the reference range, such 
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/normal-value-vs"
 * ^experimental = true
 * ^language = #uz
-* include codes from system normal-value-cs
+* include codes from system  $observation-referencerange-normalvalue
