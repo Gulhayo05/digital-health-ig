@@ -1,24 +1,60 @@
 CodeSystem: RequestIntentCS
 Id: request-intent-cs
-Title: "Request Intent CS"
-Description: "Request intent supplement with translations in Uzbek and Russian"
+Title: "Request Intent Supplement"
+Description: "Codes indicating the degree of authority/intentionality associated with a request."
 * insert SupplementCodeSystemDraft(request-intent-cs, $request-intent, 5.0.0)
-* ^experimental = true
 
 * #proposal
-  * ^designation[0].language = #ru
-  * ^designation[=].value = "Предложение"
-  * ^designation[+].language = #uz
-  * ^designation[=].value = "Taklif"
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "taklif"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "предложение"
 
 * #plan
-  * ^designation[0].language = #ru
-  * ^designation[=].value = "План"
-  * ^designation[+].language = #uz
-  * ^designation[=].value = "Reja"
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "reja"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "план"
+
+* #directive
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "ko'rsatma"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "распоряжение"
 
 * #order
-  * ^designation[0].language = #ru
-  * ^designation[=].value = "Назначение / Приказ"
-  * ^designation[+].language = #uz
-  * ^designation[=].value = "Buyruq / Tayinlash"
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "tayinlash"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "назначение"
+
+* #original-order
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "birlamchi tayinlash"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "первичное назначение"
+
+* #reflex-order
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "refleks tayinlash"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "рефлексное назначение"
+
+* #filler-order
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "ijrochi tayinlashi"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "назначение исполнителя"
+
+* #instance-order
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "aniq tayinlash"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "конкретное назначение"
+
+* #option
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "variant"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "вариант"
+
