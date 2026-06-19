@@ -44,7 +44,7 @@ Description: "Profile for Uz Core Task"
 
 * obeys uzcore-tsk-1
 
-Instance: example-task-1
+Instance: example-task-family-doctor
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 1 - Family Doctor Approval"
@@ -59,7 +59,7 @@ Description: "Task for family doctor approval"
 
 * status = task-status-cs#in-progress "In Progress"
 
-* businessStatus = task-business-status-cs#active "Active"
+* businessStatus = task-business-status-cs#overdue "Overdue"
 
 * intent = task-intent-cs#order "Order"
 
@@ -75,7 +75,7 @@ Description: "Task for family doctor approval"
 * executionPeriod.end = "2026-03-06"
 
 
-Instance: example-task-2
+Instance: example-task-specialist
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 2 - Specialist Approval"
@@ -92,7 +92,7 @@ Description: "Task for specialist approval"
 
 * status = task-status-cs#requested "Requested"
 
-* businessStatus = task-business-status-cs#active "Active"
+* businessStatus = task-business-status-cs#overdue "Overdue"
 
 * intent = task-intent-cs#order "Order"
 
@@ -109,7 +109,7 @@ Description: "Task for specialist approval"
 
 
 
-Instance: example-task-3
+Instance: example-task-regional-commission
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 3 - Regional Commission Approval"
@@ -142,7 +142,7 @@ Description: "Task for regional commission approval"
 * executionPeriod.end = "2026-03-08"
 
 
-Instance: example-task-4
+Instance: example-task-national-commission
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 4 - National Commission Approval"
@@ -176,7 +176,7 @@ Description: "Task for national commission approval"
 
 
 
-Instance: example-task-5
+Instance: example-task-hospitalization
 InstanceOf: UzCoreTask
 Usage: #example
 Title: "Task 5 - Hospitalization Approval"

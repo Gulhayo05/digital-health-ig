@@ -8,50 +8,38 @@ Description: "Category codes for tasks"
 * ^publisher = "Uzinfocom"
 * insert OriginalCodeSystemDraft(task-codes-cs)
 
-* #approve-family-doctor
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Oilaviy shifokorning roziligi"
-  * ^designation[+].language = #ru
+* #approve-family-doctor "Oilaviy shifokorning roziligi"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение семейного врача"
   * ^designation[+].language = #en
   * ^designation[=].value = "Family doctor approval"
 
-* #approve-specialist
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Mutaxassisning roziligi"
-  * ^designation[+].language = #ru
+* #approve-specialist "Mutaxassisning roziligi"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение узкого специалиста"
   * ^designation[+].language = #en
   * ^designation[=].value = "Specialist approval"
 
-* #approve-regional-commission
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Mintaqaviy komissiyaning roziligi"
-  * ^designation[+].language = #ru
+* #approve-regional-commission "Mintaqaviy komissiyaning roziligi"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение региональной комиссии"
   * ^designation[+].language = #en
   * ^designation[=].value = "Regional commission approval"
 
-* #approve-national-commission
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Respublika komissiyasining roziligi"
-  * ^designation[+].language = #ru
+* #approve-national-commission "Respublika komissiyasining roziligi"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение республиканской комиссии"
   * ^designation[+].language = #en
   * ^designation[=].value = "Republican commission approval"
-  
-* #approve-hospitalization 
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Kasalxonaga yotqizishni tasdiqlash"
-  * ^designation[+].language = #ru
+
+* #approve-hospitalization "Kasalxonaga yotqizishni tasdiqlash"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение госпитализации"
   * ^designation[+].language = #en
   * ^designation[=].value = "Hospitalization approval"
 
-* #approve-insurance-fund 
-  * ^designation[0].language = #uz
-  * ^designation[=].value = "Sug'urta fondi tomonidan tasdiqlash"
-  * ^designation[+].language = #ru
+* #approve-insurance-fund "Sug'urta fondi tomonidan tasdiqlash"
+  * ^designation[0].language = #ru
   * ^designation[=].value = "Утверждение фондом страхования"
   * ^designation[+].language = #en
   * ^designation[=].value = "Approval insurance fund"

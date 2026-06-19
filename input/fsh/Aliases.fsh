@@ -130,3 +130,6 @@ Alias: $specimen-role = http://hl7.org/fhir/specimen-role
 Alias: $nationality-cs = https://terminology.dhp.uz/fhir/core/CodeSystem/nationality-cs
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $ucum-vs = http://hl7.org/fhir/ValueSet/ucum-units
+Alias: $task-status = http://hl7.org/fhir/task-status
+Alias: $request-intent = http://hl7.org/fhir/request-intent
+Alias: $task-intent = http://hl7.org/fhir/task-intent

@@ -9,10 +9,8 @@ Description: "Intent codes for tasks"
 * insert SupplementCodeSystemDraft(task-intent-cs, $task-intent, 0.5.0)
 
 
-* #unknown
+* #unknown "Unknown"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Noma'lum"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Неизвестно"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Unknown"

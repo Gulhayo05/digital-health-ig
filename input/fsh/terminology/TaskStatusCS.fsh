@@ -8,98 +8,74 @@ Description: "Status codes for tasks"
 * ^experimental = true
 * ^publisher = "Uzinfocom"
 
-* #draft
+* #draft "Draft"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Qoralama"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Черновик"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Draft"
 
-* #requested
+* #requested "Requested"
   * ^designation[0].language = #uz
   * ^designation[=].value = "So'ralgan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Запрошено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Requested"
 
-* #received
+* #received "Received"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Qabul qilingan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Получено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Received"
 
-* #accepted
+* #accepted "Accepted"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Qabul qilingan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Принято"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Accepted"
 
-* #rejected
+* #rejected "Rejected"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Rad etilgan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Отклонено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Rejected"
 
-* #ready
+* #ready "Ready"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Tayyor"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Готово"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Ready"
 
-* #cancelled
+* #cancelled "Cancelled"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Bekor qilingan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Отменено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Cancelled"
 
-* #in-progress
+* #in-progress "In Progress"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Jarayonda"
   * ^designation[+].language = #ru
   * ^designation[=].value = "В процессе"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "In Progress"
 
-* #on-hold
+* #on-hold "On Hold"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Kutishda"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Приостановлено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "On Hold"
 
-* #failed
+* #failed "Failed"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Muvaffaqiyatsiz"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Неудачно"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Failed"
 
-* #completed
+* #completed "Completed"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Bajarildi"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Завершено"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Completed"
 
-* #entered-in-error
+* #entered-in-error "Entered in Error"
   * ^designation[0].language = #uz
   * ^designation[=].value = "Xatolik bilan kiritilgan"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Введено с ошибкой"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Entered in Error"
