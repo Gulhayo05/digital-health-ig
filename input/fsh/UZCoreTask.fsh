@@ -67,7 +67,7 @@ Description: "Task for family doctor approval"
 
 * for = Reference(Patient/example-salim)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-05"
 * requestedPeriod.end = "2026-03-06"
@@ -98,9 +98,9 @@ Description: "Task for specialist approval"
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-david)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-06"
 * requestedPeriod.end = "2026-03-07"
@@ -132,9 +132,9 @@ Description: "Task for regional commission approval"
 
 * focus = Reference(ServiceRequest/example-uz-core-service-request)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-emma)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-07"
 * requestedPeriod.end = "2026-03-08"
@@ -165,9 +165,9 @@ Description: "Task for national commission approval"
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-dyu)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-08"
 * requestedPeriod.end = "2026-03-10"
@@ -199,9 +199,9 @@ Description: "Task for hospitalization approval"
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-chang)
 
-* owner = Reference(Organization/example-organization)
+* owner = Reference(Organization/tashkent-diseases-hospital)
 
 * requestedPeriod.start = "2026-03-10"
 * requestedPeriod.end = "2026-05-10"
@@ -234,5 +234,5 @@ Description: "Example Task referencing a ServiceRequest in Uzbekistan Core profi
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-salim)
+* for = Reference(Patient/example-siong)
 * authoredOn = "2026-01-01T10:00:00Z"
