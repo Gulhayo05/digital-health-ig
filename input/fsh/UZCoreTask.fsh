@@ -81,8 +81,6 @@ Usage: #example
 Title: "Task 2 - Specialist Approval"
 Description: "Task for specialist approval"
 
-// * identifier[0].system = "https://terminology.dhp.uz/fhir/core/NamingSystem/task-identifier"
-// * identifier[0].value = "TASK-2026-002"
 
 * code = task-codes-cs#approve-specialist "Specialist approval"
 
