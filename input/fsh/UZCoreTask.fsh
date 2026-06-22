@@ -130,7 +130,7 @@ Description: "Task for regional commission approval"
 
 * intent = task-intent-cs#order "Order"
 
-* focus = Reference(ServiceRequest/example-uz-core-service-request)
+* focus = Reference(ServiceRequest/example-cbc-order)
 
 * for = Reference(Patient/example-emma)
 
@@ -165,7 +165,7 @@ Description: "Task for national commission approval"
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-dyu)
+* for = Reference(Patient/example-david)
 
 * owner = Reference(Organization/tashkent-diseases-hospital)
 
@@ -199,7 +199,7 @@ Description: "Task for hospitalization approval"
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-chang)
+* for = Reference(Patient/example-emma)
 
 * owner = Reference(Organization/tashkent-diseases-hospital)
 
@@ -234,5 +234,5 @@ Description: "Example Task referencing a ServiceRequest in Uzbekistan Core profi
 
 * focus = Reference(ServiceRequest/example-cbc-order)
 
-* for = Reference(Patient/example-siong)
+* for = Reference(Patient/example-emma)
 * authoredOn = "2026-01-01T10:00:00Z"
