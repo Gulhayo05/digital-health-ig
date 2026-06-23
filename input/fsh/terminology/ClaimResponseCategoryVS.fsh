@@ -6,6 +6,6 @@ Description: "Defines claim response category codes in Uzbek and Russian"
 * ^url = "https://terminology.dhp.uz/fhir/core/ValueSet/claim-response-category-vs"
 * ^experimental = true
 * ^extension[0].url = $valueset-supplement
-* ^extension[=].valueCanonical = Canonical(ClaimResponseCategoryVS)
+* ^extension[=].valueCanonical = Canonical(ClaimResponseCategoryCS)
 
-* include codes from system $claim-response-category
+* include $claim-response-category#benefit
