@@ -4,49 +4,55 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    types: [opened, synchronize] # This will trigger the workflow only when a PR is opened or updated with new commits
+    types: [opened, synchronize]
 
 jobs:
   sushi:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v5
 
       - name: Install Sushi
-        run: sudo npm install -g fsh-sushi
+        run: npm install -g fsh-sushi
 
       - name: Validate with Sushi
         run: sushi .
 
   ig-publisher:
     runs-on: ubuntu-latest
+
     env:
       JAVA_TOOL_OPTIONS: "-Xmx8g"
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v5
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
 
       - name: Install Jekyll
         run: sudo gem install jekyll
 
       - name: Install Sushi
-        run: sudo npm install -g fsh-sushi
+        run: npm install -g fsh-sushi
 
-      - name: Install IG publisher
+      - name: Download IG Publisher
         run: |
-          chmod +x ./_updatePublisher.sh
-          ./_updatePublisher.sh -y
+          mkdir -p input-cache
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            -o input-cache/publisher.jar
 
-      - name: Check that the IG builds successfully
+      - name: Build IG
         run: |
-          chmod +x ./_genonce.sh
-          ./_genonce.sh
+          java -Xmx8g -jar input-cache/publisher.jar -ig ig.ini
           echo "✅ IG built successfully"
 
       - name: Check QA report
         run: |
-          # Configuration
           MAX_ALLOWED_ERRORS=0
           MAX_ALLOWED_WARNINGS=0
 
@@ -55,23 +61,17 @@ jobs:
             exit 1
           fi
 
-          # Extract errors and warnings from qa.json
           ERRORS=$(jq -r '.errs // 0' output/qa.json)
           WARNINGS=$(jq -r '.warnings // 0' output/qa.json)
 
-          echo "  QA Results:"
-          echo "   Errors: $ERRORS"
-          echo "   Warnings: $WARNINGS"
+          echo "QA Results:"
+          echo "Errors: $ERRORS"
+          echo "Warnings: $WARNINGS"
 
           print_messages() {
             if [ -f "output/qa.txt" ]; then
               echo ""
               echo "::group::QA report (errors + unsuppressed warnings only)"
-              # Drop:
-              #  - per-file summary rows with no errors or warnings (info-only)
-              #  - INFORMATION/HINT/NOTE detail lines
-              # The remaining content is errors + warnings (warnings are already
-              # filtered against ignoreWarnings.txt by the IG publisher).
               grep -vE '^ [^:]+ : 0 / 0 / [0-9]+$' output/qa.txt \
                 | grep -vE '^ \* (INFORMATION|HINT|NOTE|INFO) :' \
                 || true
@@ -79,31 +79,23 @@ jobs:
             fi
           }
 
-          # Check if errors exceed threshold
-          if [ "$ERRORS" -gt $MAX_ALLOWED_ERRORS ]; then
-            echo "❌ Too many errors: $ERRORS (maximum allowed: $MAX_ALLOWED_ERRORS known errors)"
+          if [ "$ERRORS" -gt "$MAX_ALLOWED_ERRORS" ]; then
+            echo "❌ Too many errors: $ERRORS (maximum allowed: $MAX_ALLOWED_ERRORS)"
             print_messages
             exit 1
           fi
 
-          # Check if there are any warnings
-          if [ "$WARNINGS" -gt $MAX_ALLOWED_WARNINGS ]; then
+          if [ "$WARNINGS" -gt "$MAX_ALLOWED_WARNINGS" ]; then
             echo "❌ Warnings found: $WARNINGS (maximum allowed: $MAX_ALLOWED_WARNINGS)"
             print_messages
             exit 1
           fi
 
-          echo "✅ QA check passed: $ERRORS errors (≤$MAX_ALLOWED_ERRORS) and $WARNINGS warnings (≤$MAX_ALLOWED_WARNINGS)"
-
-      # - name: Wait for deployment update
-      #   if: github.ref == 'refs/heads/main'
-      #   run: |
-      #     chmod +x ./.github/scripts/wait-for-deployment.sh
-      #     ./.github/scripts/wait-for-deployment.sh https://dhp.uz/fhir/core/en/index.html 3600
+          echo "✅ QA check passed: $ERRORS errors and $WARNINGS warnings"
 
       - name: Upload output folder
         if: always() && hashFiles('output/**/*') != ''
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: ig-output-${{ github.run_number }}
           path: output/
