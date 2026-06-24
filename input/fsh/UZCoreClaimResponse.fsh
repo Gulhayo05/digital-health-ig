@@ -16,7 +16,7 @@ Description: "Uzbekistan Core Claim Response profile, used to represent claim ad
 * status ^short = "Current status of the claim response"
 * status from ClaimResponseStatusVS (required)
 
-* type
+* type MS
 * type ^short = "Category or discipline of the claim"
 * type from ClaimResponseTypeVS (required)
 
