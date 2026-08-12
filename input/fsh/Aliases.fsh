@@ -194,6 +194,8 @@ Alias: $observation-range-category-vs = https://terminology.dhp.uz/fhir/core/Val
 Alias: $task-status = http://hl7.org/fhir/task-status
 Alias: $task-intent = http://hl7.org/fhir/task-intent
 
+Alias: $permitted-data-type = http://hl7.org/fhir/permitted-data-type
+
 Alias: $claim-response-category = http://terminology.hl7.org/CodeSystem/adjudication
 Alias: $claim-response-outcome = http://hl7.org/fhir/claim-outcome
 Alias: $claim-response-decision = http://hl7.org/fhir/claim-decision
@@ -209,3 +211,16 @@ Alias: $composition-list-empty-reason = http://terminology.hl7.org/CodeSystem/li
 Alias: $composition-status = http://hl7.org/fhir/composition-status
 Alias: $composition-narrative-status = http://hl7.org/fhir/narrative-status
 Alias: $composition-list-order = http://terminology.hl7.org/CodeSystem/list-order
+Alias: $service-request-intent = http://hl7.org/fhir/request-intent
+
+Alias: $coverage-kind = http://hl7.org/fhir/coverage-kind
+
+Alias: $medicationrequest-admin-location = http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location
+Alias: $medicationrequest-intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
+Alias: $medicationrequest-status-reason = http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason
+Alias: $medicationrequest-status = http://hl7.org/fhir/CodeSystem/medicationrequest-status
+Alias: $days-of-week = http://hl7.org/fhir/days-of-week
+Alias: $event-timing = http://hl7.org/fhir/event-timing
+Alias: $v3-timing-event = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
+Alias: $v3-gts-abbreviation = http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
+Alias: $timing-abbreviation = http://terminology.hl7.org/CodeSystem/timing-abbreviation
