@@ -8,7 +8,8 @@ Description: "ValueSet for body site codes"
 * ^extension[=].valueCanonical = Canonical(BodySiteCS)
 
 // * include codes from system $sct
-* include codes from system $sct where concept is-a #123037004
+// Same content as http://hl7.org/fhir/ValueSet/body-site (R5), written as a filter so the terminology server can handle it
+* include codes from system $sct where concept is-a #442083009
 
 // * include $sct#368210008
 // * include $sct#368211007
