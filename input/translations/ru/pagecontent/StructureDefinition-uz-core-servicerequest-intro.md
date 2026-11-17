@@ -19,7 +19,7 @@ UZ Core ServiceRequest - это запрос на оказание услуги 
 - запрошенную услугу (`code`);
 - [пациента](StructureDefinition-uz-core-patient.html) или [место](StructureDefinition-uz-core-location.html), для которого создан запрос (`subject`), и [Encounter](StructureDefinition-uz-core-encounter.html), в ходе которого он создан;
 - когда услуга должна быть оказана (`occurrence[x]`) и когда запрос был выписан (`authoredOn`);
-- кто его выписал (`requester`: медицинский работник, должность медицинского работника, организация, пациент или родственник) и [Organization](StructureDefinition-uz-core-organization.html), которой предложено её выполнить (`performer`);
+- кто его выписал (`requester`: медицинский работник, должность медицинского работника, организация, пациент или родственник) и кому предложено её выполнить (`performer`): [Organization](StructureDefinition-uz-core-organization.html), [PractitionerRole](StructureDefinition-uz-core-practitioner-role.html), например медсестра визита на дом, или [HealthcareService](StructureDefinition-uz-core-healthcareservice.html);
 - детали назначения (`orderDetail.parameter`), например основание для лечения по льготному диагнозу - параметр `basis` с кодом LOINC `86947-9` Reason for hospitalization;
 - зачем нужна услуга (`reason`): код ICD-10 или SNOMED CT либо ссылка на [Condition](StructureDefinition-uz-core-condition.html), а для лечения за счёт государства - критерий SBDL рядом с кодом ICD-10;
 - как оплачивается услуга (расширение [вида оплаты](StructureDefinition-payment-type.html): бесплатно / платно / страхование / государственный тариф / прочее) и страховое покрытие (`insurance`);
@@ -184,6 +184,6 @@ UZ Core ServiceRequest - это запрос на оказание услуги 
 
 В направлении за счёт государства рядом с кодировкой ICD-10 в `reason` указывается [критерий SBDL](ValueSet-sbdl-vs.html), по которому лечение оплачивается государством: код Государственного фонда медицинского страхования для этого критерия и диагноза. Обе кодировки описывают одну причину, поэтому находятся в одном `concept`. Если причина - ссылка на Condition, укажите код SBDL в `code` этого Condition рядом с его кодом ICD-10.
 
-Дальнейший ход определяет вид оплаты. При государственном тарифе платформа запускает цепочку [Task согласования](StructureDefinition-uz-core-referral-approval-task.html) и согласует с ними `status` ServiceRequest; при любом другом виде оплаты направление сразу переходит к исполнителю. `occurrencePeriod` - окно, в течение которого услуга должна быть оказана; для фиксированного времени используйте `occurrenceDateTime`.
+Дальнейший ход определяет вид оплаты. При государственном тарифе платформа запускает цепочку [Task согласования](StructureDefinition-uz-core-referral-approval-task.html) и согласует с ними `status` ServiceRequest. Направления по ПП № 5199 и ПП № 311 (`paytype-0001-0006`, `paytype-0001-0007`) согласуются в системе, которая их выдала, например в DMED: Task согласования и `status` ServiceRequest пишет она, а платформа их не меняет и не передаёт направление исполнителю. При любом другом виде оплаты направление сразу переходит к исполнителю. `occurrencePeriod` - окно, в течение которого услуга должна быть оказана; для фиксированного времени используйте `occurrenceDateTime`.
 
 Примеры вызовов API приведены в разделе [Быстрый старт](#quick-start) внизу этой страницы.

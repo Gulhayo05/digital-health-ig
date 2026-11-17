@@ -67,7 +67,7 @@ Description: "Uzbekistan Core ServiceRequest profile, used to represent a reques
 * requester only Reference(UZCorePractitioner or UZCorePractitionerRole or UZCoreOrganization or UZCorePatient or UZCoreRelatedPerson)
 * requester ^short = "The individual, role, or organization that authored and issued the laboratory referral/order. This element identifies the healthcare professional or organizational unit responsible for initiating the ServiceRequest."
 * performer MS
-* performer only Reference(UZCoreOrganization)
+* performer only Reference(UZCoreOrganization or UZCorePractitionerRole or UZCoreHealthcareService)
 * reason MS
 * reason from ConditionCodeVS (preferred)
 * reason ^slicing.discriminator.type = #value

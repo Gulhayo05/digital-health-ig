@@ -1,5 +1,5 @@
 Invariant: uzcore-tsk-1
-Description: "If Task.status is not completed, cancelled, or failed, and requestedPeriod.end is in the past, businessStatus should be set to overdue for SLA monitoring"
+Description: "If Task.status is not completed, cancelled, or failed, and requestedPeriod.end is in the past, businessStatus should be set to overdue for SLA monitoring. Applies to Tasks the platform manages; a source system that writes its own Tasks, such as DMED for paytype-0001-0006 and paytype-0001-0007 referrals, closes an expired stage itself as failed, so this warning is expected for its Tasks"
 Severity: #warning
 Expression: "(status != 'completed' and status != 'cancelled' and status != 'failed' and requestedPeriod.end.exists() and requestedPeriod.end < now()) implies businessStatus.coding.exists(code = 'overdue')"
 

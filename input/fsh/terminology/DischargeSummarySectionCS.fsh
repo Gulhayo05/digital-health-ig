@@ -18,3 +18,13 @@ Description: "Local discharge summary section codes in Uzbekistan for sections t
   * ^designation[=].value = "Местный статус (Status localis)"
   * ^designation[+].language = #en
   * ^designation[=].value = "Local status (Status localis)"
+* #epicris-0001-00008 "O'tkazilgan davolash"
+  * ^designation[0].language = #ru
+  * ^designation[=].value = "Проведённое лечение"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "Treatment given"
+* #epicris-0001-00009 "Tavsiyalar"
+  * ^designation[0].language = #ru
+  * ^designation[=].value = "Рекомендации"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "Recommendations"
