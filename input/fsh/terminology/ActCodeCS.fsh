@@ -43,6 +43,11 @@ Description: "Act code supplement with translations in Uzbek and Russian"
   * ^designation[=].value = "Tez yordam (03)"
   * ^designation[+].language = #ru
   * ^designation[=].value = "Неотложная помощь (03)"
+* #OBSENC
+  * ^designation[0].language = #uz
+  * ^designation[=].value = "Kuzatuv uchrashuvi"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = "Наблюдательное посещение"
 * #VR
   * ^designation[0].language = #uz
   * ^designation[=].value = "Virtual (telemeditsina)"

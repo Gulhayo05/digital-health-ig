@@ -16,6 +16,7 @@ Alias: $allergy-intolerance-type = http://hl7.org/fhir/allergy-intolerance-type
 Alias: $allergy-reaction-severity = http://hl7.org/fhir/reaction-event-severity
 Alias: $allergy-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $allergyintolerance-abatement = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
+Alias: $appointment-status = http://hl7.org/fhir/appointmentstatus
 Alias: $audit-event-action = http://hl7.org/fhir/audit-event-action
 Alias: $bdp-dispense-match-status = http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-match-status
 Alias: $bdp-dispense-origin-relationship = http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-origin-relationship

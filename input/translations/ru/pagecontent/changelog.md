@@ -2,6 +2,8 @@
 
 #### Добавлено
 
+[UZ Core Appointment](StructureDefinition-uz-core-appointment.html) описывает запланированные визиты пациентов, повторно используя классификацию встреч и типы участников из руководства, и добавляет национальные типы записи, часовой пояс и [причины отмены записи](ValueSet-appointment-cancellation-reason-vs.html). [Статус записи](ValueSet-appointment-status-vs.html) добавляет переводы кодов статуса FHIR на узбекский и русский языки.
+
 [UZ Core Communication](StructureDefinition-uz-core-communication.html) фиксирует информацию, передаваемую пациентам, медицинским работникам или организациям, например оповещение в области общественного здравоохранения, которое пациенты видят в Портале пациента: оповещение жителей зоны риска с уровнем зоны I-IV по национальному регламенту оповещений или оповещение менеджера группе работников организации. Его `category` - [категория сообщения](ValueSet-communication-category-vs.html) HL7 `alert` с узбекскими и русскими названиями в [дополнении](CodeSystem-communication-category-cs.html), а уровень оповещения берётся из новой локальной системы кодов [Alert level](CodeSystem-alert-level-cs.html) с названиями на узбекском, русском и английском языках.
 
 [UZ Core Device](StructureDefinition-uz-core-device.html) принимает зарегистрированную модель из реестра Фармкомитета, её [ID записи изделия](NamingSystem-uz-pharm-device-item-id.html) и [ID изделия](NamingSystem-uz-pharm-device-id.html), в срезах `type`, а [номер регистрационного удостоверения](NamingSystem-registration-certificate-id.html) с датами выдачи и окончания срока действия - в срезе `identifier`. У `identifier.use` и `identifier.type` есть узбекские и русские названия.

@@ -10,5 +10,6 @@ Description: "Encounter classes"
 * include $v3-ActCode#IMP
 * include $v3-ActCode#AMB
 * include $v3-ActCode#EMER
+* include $v3-ActCode#OBSENC
 * include $v3-ActCode#VR
 * include $v3-ActCode#HH

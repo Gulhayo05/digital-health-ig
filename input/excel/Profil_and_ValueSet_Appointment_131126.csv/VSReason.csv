@@ -1,0 +1,8 @@
+CODE,UZ,RU,EN
+  mserv-0002-00001,Kasallik,Заболевание,Disease
+  mserv-0002-00002,Profilaktik qabul,Профилактический приём,Preventive visit
+  mserv-0002-00003,Boshqa,Другое,Other
+  enc-pur-001,Diagnostika,Диагностика,Diagnostics
+  enc-pur-002,Majburiy davolash,Принудительное лечение,Mandatory treatment
+  enc-pur-003,Ixtiyoriy davolash,Добровольное лечение,Voluntary treatment
+  enc-pur-004,Ekspertiza,Экспертиза,Expertise

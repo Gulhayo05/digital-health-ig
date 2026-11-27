@@ -1,0 +1,38 @@
+Name,,Flags,Cardinality,Example,Type,Description & Constraints
+Appointment,,TU C,,,DomainResource,"Запланированная встреча пациента и участников оказания помощи. Фактическое оказание помощи отражается отдельным Encounter.
+"
+identifier,,Σ,0..*,,Identifier,Бизнес-идентификаторы ресурса.
+status,,Σ ?! C,1..1,booked,code,"Текущее состояние ресурса.
+Binding: http://terminology.dhp.uz/ValueSet/VS--appointmentstatus"
+cancellationReason,,Σ C,0..1,pat-cpp,CodeableConcept,"Причина отмены или неявки. Допустима только при status=cancelled или noshow.
+Binding: http://terminology.dhp.uz/ValueSet/appointment-cancellation-reason "
+class,,Σ,0..*,AMB,CodeableConcept,"Класс планируемого взаимодействия: амбулаторный, стационарный, виртуальный и др.
+Binding: http://terminology.dhp.uz/ValueSet/encounter-class-vs (preferred)"
+serviceCategory,,Σ,0..*,266,CodeableConcept,"Широкая категория предоставляемых услуг.
+Binding: https://terminology.dhp.uz//ValueSet/service-category "
+specialty,,Σ,0..*,394814009,CodeableConcept,"Медицинская специальность, необходимая для оказания услуги.
+Binding: http://terminology.dhp.uz/ValueSet/c80-practice-codes (preferred)"
+appointmentType,,Σ,0..1,ROUTINE,CodeableConcept,"Тип записи: плановый, повторный, без предварительной записи и т. п. Не заменяет вид услуги.
+Binding: http://terminology.dhp.uz/ValueSet/hl7VS-appointmentReasonCodes (preferred)"
+reason,,Σ,0..*,  mserv-0002-00001,CodeableReference(Condition | Procedure | Observation | ImmunizationRecommendation),"Причина записи: код и/или ссылка на клинический ресурс.
+Binding: http://terminology.dhp.uz/ValueSet/encounter-reason (preferred)"
+priority,,,0..1,R,CodeableConcept,"Срочность записи. В R5 это CodeableConcept, а не числовой приоритет R4.
+Binding: http://terminology.dhp.uz/ValueSet/Appointment priority"
+description,,,0..1,Плановый приём врача общей практики,string,Краткое текстовое описание цели встречи.
+replaces,,,0..*,"{""reference"":""Appointment/example-old""}",Reference(Appointment),"Предыдущие записи, заменённые данной записью."
+start,,Σ C,0..1,2026-11-02T09:00:00+05:00,instant,Дата и время начала с обязательным часовым смещением для instant.
+end,,Σ C,0..1,2026-11-02T09:30:00+05:00,instant,Дата и время окончания с обязательным часовым смещением для instant.
+minutesDuration,,,0..1,30,positiveInt,"Продолжительность встречи в минутах. Может быть меньше интервала end-start, если внутри предусмотрены перерывы."
+slot,,,0..*,"{""reference"":""Slot/example-slot""}",Reference(Slot),"Слоты, резервируемые этой записью. Прямая ссылка на Schedule в Appointment отсутствует."
+created,,,0..1,2026-10-28T12:00:00+05:00,dateTime,Дата и время создания записи.
+cancellationDate,,C,0..1,2026-10-29T10:00:00+05:00,dateTime,Дата и время отмены. Допустима только при status=cancelled или noshow.
+subject,,Σ,0..1,"{""reference"":""Patient/example-patient""}",Reference(Patient | Group),"Пациент или группа, для которых запланирована встреча."
+participant,,C,1..*,"{""actor"":{""reference"":""Patient/example-patient""},""required"":true,""status"":""accepted""}",BackboneElement,"Участники встречи. В каждом элементе требуется type или actor; status обязателен.
+"
+type,,Σ C,0..*,ATND,CodeableConcept,"Роль участника во встрече.
+Binding: http://terminology.dhp.uz/ValueSet/Encounter participant type translations"
+period,,,0..1,"{""start"":""2026-11-02T09:00:00+05:00"",""end"":""2026-11-02T09:30:00+05:00""}",Period,Период участия конкретного участника; может быть короче всей встречи.
+actor,,Σ C,0..1,"{""reference"":""Patient/example-patient""}",Reference(Patient | Group | Practitioner | PractitionerRole | CareTeam | RelatedPerson | Device | HealthcareService | Location),"Конкретное лицо, группа, помещение, оборудование или служба, участвующие во встрече."
+recurrenceId,,,0..1,1,positiveInt,"Порядковый номер встречи в серии, начиная с 1."
+timezone,,,0..1,"{""system"":""https://www.iana.org/time-zones"",""code"":""Asia/Tashkent""}",CodeableConcept,"Часовой пояс IANA для вычисления повторений, например Asia/Tashkent.
+Binding: http://terminology.dhp.uz/ValueSet/timezones|5.0.0 (required)"

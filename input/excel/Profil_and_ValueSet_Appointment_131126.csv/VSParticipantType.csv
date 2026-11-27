@@ -1,0 +1,10 @@
+CODE,UZ,RU,EN
+ADM,Qabul qiluvchi shifokor,Принимающий врач,admitter
+ATND,Davolovchi shifokor,Лечащий врач,attender
+CALLBCK,Qayta aloqa uchun shaxs,Контакт для обратной связи,callback contact
+CON,Maslahatchi,Консультант,consultant
+DIS,Chiqaruvchi shifokor,Выписывающий врач,discharger
+ESC,Hamrohlik qiluvchi,Сопровождающий,escort
+REF,Yo‘llagan mutaxassis,Направивший специалист,referrer
+translator,Tarjimon,Переводчик,Translator
+emergency,Favqulodda aloqa uchun shaxs,Контакт на экстренный случай,Emergency

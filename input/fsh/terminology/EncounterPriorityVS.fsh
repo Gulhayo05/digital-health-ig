@@ -13,6 +13,10 @@ Description: "Encounter priorities"
 * include $v3ActPriority#R
 * include $v3ActPriority#UR
 * include $v3ActPriority#EL
+* include $v3ActPriority#A
+* include $v3ActPriority#S
+* include $v3ActPriority#T
+* include $v3ActPriority#UD
 * include encounter-priority-home-cs#gencl-0002-00001
 * include encounter-priority-home-cs#gencl-0002-00002
 * include encounter-priority-home-cs#gencl-0002-00003

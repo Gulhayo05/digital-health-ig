@@ -1,0 +1,7 @@
+CODE,UZ,RU,EN
+IMP,Statsionar yordam,Стационарное взаимодействие,inpatient encounter
+AMB,Ambulator yordam,Амбулаторное взаимодействие,ambulatory
+OBSENC,Kuzatuv,Наблюдение,observation encounter
+EMER,Shoshilinch yordam,Экстренная помощь,emergency
+VR,Virtual uchrashuv,Виртуальная встреча,virtual
+HH,Uyda yordam,Помощь на дому,home health

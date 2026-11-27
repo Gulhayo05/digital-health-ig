@@ -1,0 +1,33 @@
+CODE,UZ,RU,EN
+apcan-0001-00001,Bemor bilan bog‘liq sabab,По обстоятельствам пациента,Patient-related reason
+apcan-0001-00002,Eslatma tizimi orqali bekor qilish,Отмена через систему напоминаний,Cancellation through the reminder system
+apcan-0001-00003,Bemor portali orqali bekor qilish,Отмена через портал пациента,Cancellation through the patient portal
+apcan-0001-00004,Bemor vafot etgan,Пациент умер,Patient deceased
+apcan-0001-00005,Ahvoli yaxshilangan,Самочувствие улучшилось,Patient feeling better
+apcan-0001-00006,Transport yo‘q,Нет транспорта,No transportation
+apcan-0001-00007,Sug‘urta yoki boshqa to‘lov qoplamasi tugagan,Прекращено страховое или иное покрытие,Insurance or other payer coverage ended
+apcan-0001-00008,Yashash joyi o‘zgargan,Смена места жительства,Change of residence
+apcan-0001-00009,Homiladorlik,Беременность,Pregnancy
+apcan-0001-00010,Kutish ro‘yxatidan yozilgan,Запись из листа ожидания,Scheduled from the waiting list
+apcan-0001-00011,Norozilik yoki mutaxassisni almashtirish,Недовольство или смена специалиста,Dissatisfaction or change of provider
+apcan-0002-00001,Xizmat ko‘rsatuvchi bilan bog‘liq sabab,По обстоятельствам исполнителя,Provider-related reason
+apcan-0002-00002,Xizmat ko‘rsatuvchining shaxsiy sabablari,Личные обстоятельства исполнителя,Provider personal reasons
+apcan-0002-00003,Xizmat ko‘rsatuvchi qaroriga ko‘ra chiqarish,Выписка по решению исполнителя,Discharge at the provider’s decision
+apcan-0002-00004,O‘qish yoki yig‘ilish,Обучение или совещание,Education or meeting
+apcan-0002-00005,Xizmat ko‘rsatuvchi kasalxonaga yotqizilgan,Госпитализация исполнителя,Provider hospitalized
+apcan-0002-00006,Laboratoriya ko‘rsatkichlari ruxsat etilgan oraliqdan tashqarida,Лабораторные показатели вне допустимых значений,Laboratory results outside the permitted range
+apcan-0002-00007,MRT tekshiruvi shakliga ko‘ra davom ettirish mumkin emas,По результатам скрининга МРТ проводить нельзя,MRI screening results indicate that the procedure cannot be performed
+apcan-0002-00008,Onkologik davolash rejasi o‘zgargan,Изменён план онкологического лечения,Oncology treatment plan changed
+apcan-0003-00001,Uskunaga xizmat ko‘rsatish yoki ta’mirlash,Обслуживание или ремонт оборудования,Equipment maintenance or repair
+apcan-0004-00001,Tayyorgarlik yoki dori bilan tayyorlash tugallanmagan,Подготовка или медикация не завершены,Preparation or medication not completed
+apcan-0005-00001,Boshqa sabab,Другая причина,Other reason
+apcan-0005-00002,CMS terapiya limiti tufayli xizmat tasdiqlanmagan,Услуга не одобрена из-за лимита терапии CMS,Service not authorized due to the CMS therapy limit
+apcan-0005-00003,Xato,Ошибка,Error
+apcan-0005-00004,Moliyaviy sabab,Финансовая причина,Financial reason
+apcan-0005-00005,Vena ichiga kirish muammosi yoki infiltratsiya,Проблема внутривенного доступа или инфильтрация,Problem with IV access or infiltration
+apcan-0005-00006,Tarjimon mavjud emas,Нет переводчика,Interpreter unavailable
+apcan-0005-00007,"Tayyorgarlik, dori yoki natijalar mavjud emas","Нет подготовки, препаратов или результатов","Preparation, medication, or results unavailable"
+apcan-0005-00008,Xona yoki resursga texnik xizmat,Обслуживание помещения или ресурса,Technical maintenance of the room or resource
+apcan-0005-00009,Jadvaldagi buyurtma xatosi,Ошибка назначения в расписании,Scheduling order error
+apcan-0005-00010,Qayd etilmagan yozilishsiz tashrif xatosi,Ошибка незарегистрированного визита без записи,Error involving a walk-in visit without registration
+apcan-0005-00011,Ob-havo sharoiti,Погодные условия,Weather conditions
